@@ -1,0 +1,35 @@
+.rect{
+    width:100px;
+    height:100px;
+    background-color:red;
+    position:fixed;/*相对于网页定位*/
+    animation-name:mymove;
+    /*animation-name属性指定动画名称。值为:keyframename指定要绑定到选择器的关键帧的名称;none指定有没有动画(可用于覆盖从级联的动画)*/
+    animation-duration:3s;
+    /*animation-duration属性定义动画完成一个周期需要多少秒或毫秒.值:time   指定动画播放完成花费的时间.默认值为0,意味着没有动画效果.*/
+    animation-timing-function:linear;
+    /*animation-timing-function指定动画按照何种速度曲线完成一个周期.  值见：transition特效过渡效果/ceng.css*/
+    animation-delay:3s;/*延迟多长时间开始运动   animation-delay值单位可以是秒(s)或毫秒(ms).允许负值,-3s是跳过前3s动画。*/
+    animation-iteration-count:3;
+    /*循环的次数   animation-iteration-count属性定义动画播放次数.   值:number数字;   infinite:指定动画应该播放无限次(永远)*/
+    animation-direction:normal;
+    /*animation-direction 属性定义是否循环交替反向播放动画。   值：normal 默认值。动画按正常播放。；reverse:动画反向播放。*/
+}
+@keyframes mymove/*给关键帧起名字*/{
+    from {top:0;left:0;}
+    to{ top:0;left:80%;}
+}
+.rect1{
+    width:100px;
+    height:100px;
+    background-color:red;
+    position:fixed;/*相对于网页定位*/
+    animation:mymove1 2s infinite;/*第一个调用关键帧的name,第二个值是执行多长时间,第三个值是重复执行*/
+}
+@keyframes mymove1/*给关键帧起名字*/{
+    0%{top:0;left:0;background-color:red;}
+    25%{ top:0;left:80%;background-color:black;}
+    50%{top:80%;left:80%;background-color:green;}
+    75%{top:80%;left:20%;background-color:pink;}
+    100%{top:0%;left:20%;background-color:gray;}
+}
