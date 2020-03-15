@@ -1,0 +1,25 @@
+body{
+    background-color:gray;
+}
+.ceng{
+    margin:20px;
+    width:294px;
+    padding:10px 10px 20px 10px;
+    border:1px solid gray;
+    background-color:white;
+    box-shadow:2px 3px 20px red;/*X轴阴影的偏移量,Y轴的偏移量,阴影的宽度,阴影颜色*/
+}
+.rotate_left{
+
+    float:left;
+    transform:rotate(7deg);
+}
+.rotate_right{
+
+    float:left;
+    transform:rotate(-7deg);
+}
+img{
+    width:400px;
+    height:200px;
+}
